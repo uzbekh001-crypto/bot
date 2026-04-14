@@ -3,6 +3,8 @@ import yt_dlp
 import asyncio
 import uuid
 import subprocess
+import os
+
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
@@ -262,6 +264,8 @@ if __name__ == "__main__":
     print("Bot ishladi 🚀")
     app.run_polling()
 
+port = int(os.environ.get("PORT", 10000))
+app.run_polling()
 
 
 
